@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VEf-vT-eMf">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Events-->
+        <scene sceneID="AA7-e5-uJl">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p20-0a-WoF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="CB4-Da-m6b" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Events" id="a7b-wa-ex7"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="j0b-Tb-Caq">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mi9-2h-lig">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="0ZU-n0-MNo" kind="relationship" relationship="rootViewController" id="K3E-sq-yKq"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-1151" y="838"/>
+        </scene>
+        <!--Events-->
+        <scene sceneID="9hk-nd-aEd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Events" id="0ZU-n0-MNo" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ICd-oq-zcY"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f0O-XB-gbo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1151" y="1289"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="xyX-nb-nrY">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="VEf-vT-eMf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="406-As-9uI">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="CB4-Da-m6b" kind="relationship" relationship="viewControllers" id="FuQ-zR-56N"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5WG-cF-aTs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-527" y="97"/>
+        </scene>
+    </scenes>
+</document>
