@@ -11,6 +11,7 @@ import UIKit
 extension UIImage {
   
   enum NamedImage: String {
+    case list = "list"
     case clock = "clock"
     case checkmark = "checkmark"
   }

@@ -18,6 +18,7 @@ class EventsViewController: UIViewController {
   var events = [DateEvent]()
   
   /**
+   Event handler for the time manager's timestamp events
    */
   private var timestampEventHandler: Disposable?
   
@@ -29,6 +30,9 @@ class EventsViewController: UIViewController {
     tableView.delegate = self
     tableView.dataSource = self
     tableView.register(UINib(nibName: EventTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: EventTableViewCell.identifier)
+    
+    // Configure navigation bar
+    navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAddEventButton(_:)))
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -52,16 +56,22 @@ class EventsViewController: UIViewController {
       }
     }
   }
+}
+
+extension EventsViewController {
   
-  /*
-   // MARK: - Navigation
-   
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
-   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-   // Get the new view controller using segue.destinationViewController.
-   // Pass the selected object to the new view controller.
-   }
-   */
+  @objc
+  private func didTapAddEventButton(_ sender: UIBarButtonItem) {
+    let addEventStoryboard = UIStoryboard(name: "AddEvent", bundle: nil)
+    guard let addEventViewController = addEventStoryboard.instantiateInitialViewController() else {
+      return
+    }
+    
+    let navigationController = UINavigationController(rootViewController: addEventViewController)
+    navigationController.navigationBar.prefersLargeTitles = true
+    navigationController.addCancelButton(side: .left)
+    present(navigationController, animated: true)
+  }
 }
 
 extension EventsViewController: UITableViewDelegate {
